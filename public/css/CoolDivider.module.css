@@ -1,0 +1,34 @@
+.coolDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0; /* Adjust as needed */
+  position: relative;
+  width: 100%; /* Ensure it takes up full width */
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background: #fff; /* Adjust color as needed */
+  position: relative;
+}
+
+.decorativeElement {
+  width: 100px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  background: #121212; /* Adjust background color as needed */
+  border: 1px solid #fff; /* Adjust border color as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; /* Ensure the decorative element is on top */
+  position: absolute;
+}
+
+.innerElement {
+  width: 50px; /* Adjust size as needed */
+  height: 2px; /* Adjust size as needed */
+  background: #fff; /* Adjust color as needed */
+  z-index: 3; /* Ensure the inner element is on top */
+}
