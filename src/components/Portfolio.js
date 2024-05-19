@@ -7,6 +7,7 @@ import {
   soundcloud,
   text,
   twitter,
+  video,
   vimeo,
   youtube,
 } from "../svgImage";
@@ -237,13 +238,18 @@ const Portfolio = () => {
                   </div>
                   <div className="overlay" />
                   <div className="details">
-                    <span>Example Video</span>
-                    <h3>Video Title</h3>
-                  </div>
+                    <span>Cootie Clash</span>
+                    <h3>web3 game built in UnrealEngine</h3>
+                    </div>
                   <a
-                    className="aali_tm_full_link popup-youtube"
+                    className="aali_tm_full_link popup-video"
                     href="#"
-                    onClick={() => showPopup("youtube", "7e90gBu4pas")}
+                    onClick={() =>
+                      showPopup(
+                        "video",
+                        "https://bafybeicequ5k6vzdmtmgcu2kcmhgs2hrxgxyehd7etg62o22flalbe4hb4.ipfs.nftstorage.link/2023-03-26%2011-44-16.mp4"
+                      )
+                    }
                   />
                 </div>
               </li>
@@ -259,9 +265,9 @@ const Portfolio = () => {
                     <h3>Video Title 2</h3>
                   </div>
                   <a
-                    className="aali_tm_full_link popup-youtube"
-                    href="#"
-                    onClick={() => showPopup("youtube", "7e90gBu4pas")}
+                className="aali_tm_full_link popup-youtube"
+                      href="https://ipfs.io/ipfs/<CID1>"
+                      onClick={() => showPopup("youtube", "<CID1>")}
                   />
                 </div>
               </li>

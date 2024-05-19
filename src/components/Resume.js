@@ -56,7 +56,7 @@ const Resume = () => {
                           <span className="icon">{edu}</span>
                           <div className="info">
                             <div className="left">
-                              <h3>Software Engineer</h3>
+                              <h3>Computer Science</h3>
                               <span>University of North Florida</span>
                             </div>
                             <div className="right">
