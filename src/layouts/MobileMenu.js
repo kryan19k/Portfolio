@@ -8,7 +8,7 @@ const MobileMenu = () => {
         <div className="mobile_in">
           <div className="logo">
             <a href="#">
-              <img src="img/logo/dark.png" alt="aali image" />
+              <img src="img/korylogo.png" alt="aali image" />
             </a>
           </div>
           <div className="trigger">
@@ -50,16 +50,7 @@ const MobileMenu = () => {
                 Service
               </a>
             </li>
-            <li>
-              <a onClick={() => setToggle(false)} href="#testimonial">
-                Testimonial
-              </a>
-            </li>
-            <li>
-              <a onClick={() => setToggle(false)} href="#blog">
-                Blog
-              </a>
-            </li>
+           
             <li>
               <a onClick={() => setToggle(false)} href="#contact">
                 Contact

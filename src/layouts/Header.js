@@ -1,13 +1,41 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { scroll_, stickyNav } from "../utilits";
 
 const Header = ({ dark }) => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [isAtTop, setIsAtTop] = useState(true);
+
   useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.pageYOffset;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and not at the top
+        setIsVisible(false);
+      } else {
+        // Scrolling up or at the top
+        setIsVisible(true);
+      }
+
+      setIsAtTop(currentScrollY === 0);
+      lastScrollY = currentScrollY;
+    };
+
+    let lastScrollY = window.pageYOffset;
+
+    window.addEventListener("scroll", handleScroll);
     window.addEventListener("scroll", stickyNav);
     window.addEventListener("scroll", scroll_);
-  });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", stickyNav);
+      window.removeEventListener("scroll", scroll_);
+    };
+  }, []);
+
   return (
-    <div className="aali_tm_header">
+    <div className={`aali_tm_header ${isVisible ? "visible" : "hidden"} ${isAtTop ? "at-top" : ""}`}>
       <div className="container">
         <div className="inner">
           {dark ? (

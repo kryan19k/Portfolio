@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Fragment, useEffect } from "react";
+import { Fragment, useEffect, useState } from "react";
 import {
   aali_tm_moving_animation,
   aTagClick,
@@ -13,12 +13,38 @@ import MobileMenu from "./MobileMenu";
 import Preloader from "./Preloader";
 
 const Layout = ({ children, headName, dark }) => {
+  const [showTopBtn, setShowTopBtn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowTopBtn(true);
+      } else {
+        setShowTopBtn(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     dataImage();
     wowJsAnimation();
     aali_tm_moving_animation();
     aTagClick();
   });
+
   return (
     <Fragment>
       <Head>
@@ -31,6 +57,11 @@ const Layout = ({ children, headName, dark }) => {
         {children}
         <Footer />
         <Cursor />
+        {showTopBtn && (
+          <button className="back-to-top" onClick={scrollToTop}>
+            ↑
+          </button>
+        )}
       </div>
     </Fragment>
   );

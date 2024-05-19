@@ -65,7 +65,7 @@ const Service = ({ dark }) => {
                   <div className="title">
                     <h3>NFT Minting Dapp</h3>
                     <span className="price">
-                      Starts from <span>$149</span>
+                      Starts from <span>$589</span>
                     </span>
                   </div>
                   <div className="text">
@@ -99,7 +99,7 @@ const Service = ({ dark }) => {
                       <div className="main_title">
                         <h3>NFT Minting Dapp</h3>
                         <span className="price">
-                          Starts from <span>$149</span>
+                          Starts from <span>$589</span>
                         </span>
                       </div>
                       <div className="descriptions">
@@ -137,7 +137,7 @@ const Service = ({ dark }) => {
                   <div className="title">
                     <h3>NFT or Token Landing Page</h3>
                     <span className="price">
-                      Starts from <span>$299</span>
+                      Starts from <span>$699</span>
                     </span>
                   </div>
                   <div className="text">
@@ -170,7 +170,7 @@ const Service = ({ dark }) => {
                       <div className="main_title">
                         <h3>NFT Or Token Landing Page</h3>
                         <span className="price">
-                          Starts from <span>$299</span>
+                          Starts from <span>$699</span>
                         </span>
                       </div>
                       <div className="descriptions">
@@ -215,7 +215,7 @@ const Service = ({ dark }) => {
                   <div className="title">
                     <h3>Staking Dapp</h3>
                     <span className="price">
-                      Starts from <span>$499</span>
+                      Starts from <span>$888</span>
                     </span>
                   </div>
                   <div className="text">
@@ -249,7 +249,7 @@ const Service = ({ dark }) => {
                       <div className="main_title">
                         <h3>Staking Dapp</h3>
                         <span className="price">
-                          Starts from <span>$499</span>
+                          Starts from <span>$888</span>
                         </span>
                       </div>
                       <div className="descriptions">

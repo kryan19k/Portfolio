@@ -46,22 +46,67 @@ const Portfolio = () => {
     setVideo(true);
     setVideoContent({ name, src });
   };
-  // Model Box
+  // Modal Box
   const [modal, setModal] = useState(0);
+
+  const portfolioItems = [
+    {
+      id: 1,
+      category: "detail",
+      title: "ICO & Staking",
+      client: "GigaChad",
+      img: "img/mint2.png",
+      date: "March 07, 2021",
+    },
+    {
+      id: 2,
+      category: "detail",
+      title: "NFT Mint and Staking",
+      client: "Dapper Dogs",
+      img: "img/dapper.png",
+      date: "April 12, 2021",
+    },
+    {
+      id: 3,
+      category: "detail",
+      title: "Smart Headphone",
+      client: "Soundcloud",
+      img: "img/staking.png",
+      date: "May 30, 2021",
+    },
+    {
+      id: 4,
+      category: "detail",
+      title: "Hippie Sabotage",
+      client: "Hippie",
+      img: "img/landing.png",
+      date: "June 15, 2021",
+    },
+    {
+      id: 5,
+      category: "detail",
+      title: "Mockup Camera",
+      client: "Mockup",
+      img: "img/logos.png",
+    
+      date: "July 20, 2021",
+    },
+  ];
+
   return (
-    <div className="aali_tm_section help" id="portfolio">
-      {video && <Popup close={setVideo} content={videoContent} />}
-      <div className="aali_tm_portfolio wow fadeInUp" data-wow-duration="1s">
-        <div className="container">
-          <div
-            className="aali_tm_main_title"
-            data-text-align="center"
-            data-color="light"
-          >
-            <span>Selected works</span>
-            <h3>Check my portfolio</h3>
-          </div>
-          <div className="portfolio_filter">
+    <div className="aali_tm_section help" id="portfolio" style={{ marginTop: '100px', paddingTop: '50px' }}>
+    {video && <Popup close={setVideo} content={videoContent} />}
+    <div className="aali_tm_portfolio wow fadeInUp" data-wow-duration="1s">
+      <div className="container">
+        <div
+          className="aali_tm_main_title"
+          data-text-align="center"
+          data-color="light"
+        >
+          <span>Selected works</span>
+          <h3>Check my portfolio</h3>
+        </div>
+        <div className="portfolio_filter">
             <ul>
               <li>
                 <a onClick={handleFilterKeyChange("*")} className="current">
@@ -69,54 +114,131 @@ const Portfolio = () => {
                 </a>
               </li>
               <li>
-                <a onClick={handleFilterKeyChange("vimeo")}>Vimeo</a>
+                <a onClick={handleFilterKeyChange("video")}>Videos</a>
               </li>
               <li>
-                <a onClick={handleFilterKeyChange("youtube")}>Youtube</a>
-              </li>
-              <li>
-                <a onClick={handleFilterKeyChange("soundcloud")}>Soundcloud</a>
-              </li>
-              <li>
-                <a onClick={handleFilterKeyChange("image")}>Image</a>
-              </li>
-              <li>
-                <a onClick={handleFilterKeyChange("detail")}>Detail</a>
+                <a onClick={handleFilterKeyChange("detail")}>Details</a>
               </li>
             </ul>
           </div>
           <div className="portfolio_list">
             <ul className="gallery_zoom">
-              <li className="filter-item vimeo">
+              {portfolioItems.map((item) => (
+                <li
+                  key={item.id}
+                  className={`filter-item ${item.category}`}
+                >
+                  <div className="list_inner">
+                    <div className="image">
+                      <img src="img/thumbs/1-1.jpg" alt="aali image" />
+                      <div className="main" data-img-url={item.img} />
+                    </div>
+                    <div className="overlay" />
+                    <div className="details">
+                      <span>{item.client}</span>
+                      <h3>{item.title}</h3>
+                    </div>
+                    <a
+                      className="aali_tm_full_link portfolio_popup"
+                      href="#"
+                      onClick={() => setModal(item.id)}
+                    />
+                    <div className={modal === item.id ? "" : "hidden_content"}>
+                      <ModalBox close={setModal}>
+                        <div className="popup_details">
+                          <div className="top_image">
+                            <img src="img/thumbs/4-2.jpg" alt="" />
+                            <div className="main" data-img-url={item.img}></div>
+                          </div>
+                          <div className="portfolio_main_title">
+                            <span>Detail</span>
+                            <h3>{item.title}</h3>
+                            <div></div>
+                          </div>
+                          <div className="main_details">
+                            <div className="textbox">
+                              <p>
+                                We live in a world where we need to move quickly
+                                and iterate on our ideas as flexibly as possible.
+                                Building mockups strikes the ideal balance ease of
+                                modification.
+                              </p>
+                              <p>
+                                Mockups are useful both for the creative phase of
+                                the project - for instance when {`you're`} trying
+                                to figure out your user flows or the proper visual
+                                hierarchy - and the production phase when they
+                                will represent the target product.
+                              </p>
+                            </div>
+                            <div className="detailbox">
+                              <ul>
+                                <li>
+                                  <span className="first">Client</span>
+                                  <span>{item.client}</span>
+                                </li>
+                                <li>
+                                  <span className="first">Category</span>
+                                  <span>
+                                    <a href="#">Detail</a>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span className="first">Date</span>
+                                  <span>{item.date}</span>
+                                </li>
+                                <li>
+                                  <span className="first">Share</span>
+                                  <ul className="share">
+                                    <li>
+                                      <a href="#">{fb}</a>
+                                    </li>
+                                    <li>
+                                      <a href="#">{twitter}</a>
+                                    </li>
+                                    <li>
+                                      <a href="#">{insta}</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="additional_images">
+                            <ul>
+                              <li>
+                                <div className="list_inner">
+                                  <div className="my_image">
+                                    <img
+                                      src="img/thumbs/4-2.jpg"
+                                      alt="aali image"
+                                    />
+                                    <div
+                                      className="main"
+                                      data-img-url={item.img}
+                                    />
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </ModalBox>
+                    </div>
+                  </div>
+                </li>
+              ))}
+              {/* Add a few example video items */}
+              <li className="filter-item video">
                 <div className="list_inner">
                   <div className="image">
                     <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/mint2.png" />
+                    <div className="main" data-img-url="img/video1.png" />
                   </div>
                   <div className="overlay" />
-                  {vimeo}
                   <div className="details">
-                    <span>Vimeo</span>
-                    <h3>New Laptop</h3>
-                  </div>
-                  <a
-                    className="aali_tm_full_link popup-vimeo"
-                    href="#"
-                    onClick={() => showPopup("vimeo", "337293658")}
-                  />
-                </div>
-              </li>
-              <li className="filter-item youtube">
-                <div className="list_inner">
-                  <div className="image">
-                    <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/dapper.png" />
-                  </div>
-                  <div className="overlay" />
-                  {youtube}
-                  <div className="details">
-                    <span>Youtube</span>
-                    <h3>Best Phone</h3>
+                    <span>Example Video</span>
+                    <h3>Video Title</h3>
                   </div>
                   <a
                     className="aali_tm_full_link popup-youtube"
@@ -125,306 +247,22 @@ const Portfolio = () => {
                   />
                 </div>
               </li>
-              <li className="filter-item soundcloud">
+              <li className="filter-item video">
                 <div className="list_inner">
                   <div className="image">
                     <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/staking.png" />
+                    <div className="main" data-img-url="img/video2.png" />
                   </div>
                   <div className="overlay" />
-                  {soundcloud}
                   <div className="details">
-                    <span>Soundcloud</span>
-                    <h3>Smart Headphone</h3>
+                    <span>Example Video</span>
+                    <h3>Video Title 2</h3>
                   </div>
                   <a
-                    className="aali_tm_full_link soundcloude_link mfp-iframe audio"
+                    className="aali_tm_full_link popup-youtube"
                     href="#"
-                    onClick={() => showPopup("soundcloud", "471954807")}
+                    onClick={() => showPopup("youtube", "7e90gBu4pas")}
                   />
-                </div>
-              </li>
-              <li className="filter-item detail">
-                <div className="list_inner">
-                  <div className="image">
-                    <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/landing.png" />
-                  </div>
-                  <div className="overlay" />
-                  {text}
-                  <div className="details">
-                    <span>Detail</span>
-                    <h3>Hippie Sabotage</h3>
-                  </div>
-                  <a
-                    className="aali_tm_full_link portfolio_popup"
-                    href="#"
-                    onClick={() => setModal(1)}
-                  />
-                  <div className={modal === 1 ? "" : "hidden_content"}>
-                    <ModalBox close={setModal}>
-                      <div className="popup_details">
-                        <div className="top_image">
-                          <img src="img/thumbs/4-2.jpg" alt="" />
-                          <div
-                            className="main"
-                            data-img-url="img/logos.png"
-                          ></div>
-                        </div>
-                        <div className="portfolio_main_title">
-                          <span>Detail</span>
-                          <h3>Hippie Sabotage</h3>
-                          <div></div>
-                        </div>
-                        <div className="main_details">
-                          <div className="textbox">
-                            <p>
-                              We live in a world where we need to move quickly
-                              and iterate on our ideas as flexibly as possible.
-                              Building mockups strikes the ideal balance ease of
-                              modification.
-                            </p>
-                            <p>
-                              Mockups are useful both for the creative phase of
-                              the project - for instance when {`you're`} trying
-                              to figure out your user flows or the proper visual
-                              hierarchy - and the production phase when they
-                              will represent the target product.
-                            </p>
-                          </div>
-                          <div className="detailbox">
-                            <ul>
-                              <li>
-                                <span className="first">Client</span>
-                                <span>Alvaro Morata</span>
-                              </li>
-                              <li>
-                                <span className="first">Category</span>
-                                <span>
-                                  <a href="#">Detail</a>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="first">Date</span>
-                                <span>March 07, 2021</span>
-                              </li>
-                              <li>
-                                <span className="first">Share</span>
-                                <ul className="share">
-                                  <li>
-                                    <a href="#">{fb}</a>
-                                  </li>
-                                  <li>
-                                    <a href="#">{twitter}</a>
-                                  </li>
-                                  <li>
-                                    <a href="#">{insta}</a>
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div className="additional_images">
-                          <ul>
-                            <li>
-                              <div className="list_inner">
-                                <div className="my_image">
-                                  <img
-                                    src="img/thumbs/4-2.jpg"
-                                    alt="aali image"
-                                  />
-                                  <div
-                                    className="main"
-                                    data-img-url="img/logos.png"
-                                  />
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="list_inner">
-                                <div className="my_image">
-                                  <img
-                                    src="img/thumbs/4-2.jpg"
-                                    alt="aali image"
-                                  />
-                                  <div
-                                    className="main"
-                                    data-img-url="img/portfolio/2.jpg"
-                                  />
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="list_inner">
-                                <div className="my_image">
-                                  <img
-                                    src="img/thumbs/4-2.jpg"
-                                    alt="aali image"
-                                  />
-                                  <div
-                                    className="main"
-                                    data-img-url="img/portfolio/3.jpg"
-                                  />
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </ModalBox>
-                  </div>
-                </div>
-              </li>
-              <li className="filter-item image">
-                <div className="list_inner">
-                  <div className="image">
-                    <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/logos.png" />
-                  </div>
-                  <div className="overlay" />
-                  {maximize}
-                  <div className="details">
-                    <span>Image</span>
-                    <h3>Mockup Camera</h3>
-                  </div>
-                  <a
-                    className="aali_tm_full_link zoom"
-                    href="#"
-                    onClick={() => showPopup("image", "img/portfolio/5.jpg")}
-                  />
-                </div>
-              </li>
-              <li className="filter-item detail">
-                <div className="list_inner">
-                  <div className="image">
-                    <img src="img/thumbs/1-1.jpg" alt="aali image" />
-                    <div className="main" data-img-url="img/mint1.png" />
-                  </div>
-                  <div className="overlay" />
-                  {text}
-                  <div className="details">
-                    <span>Detail</span>
-                    <h3>Good Present</h3>
-                  </div>
-                  <a
-                    className="aali_tm_full_link portfolio_popup"
-                    href="#"
-                    onClick={() => setModal(2)}
-                  />
-                  <div className={modal === 2 ? "" : "hidden_content"}>
-                    <ModalBox close={setModal}>
-                      <div className="popup_details">
-                        <div className="top_image">
-                          <img src="img/thumbs/4-2.jpg" alt="" />
-                          <div
-                            className="main"
-                            data-img-url="img/mint2.png"
-                          ></div>
-                        </div>
-                        <div className="portfolio_main_title">
-                          <span>Detail</span>
-                          <h3>Good Present</h3>
-                          <div></div>
-                        </div>
-                        <div className="main_details">
-                          <div className="textbox">
-                            <p>
-                              We live in a world where we need to move quickly
-                              and iterate on our ideas as flexibly as possible.
-                              Building mockups strikes the ideal balance ease of
-                              modification.
-                            </p>
-                            <p>
-                              Mockups are useful both for the creative phase of
-                              the project - for instance when {`you're`} trying
-                              to figure out your user flows or the proper visual
-                              hierarchy - and the production phase when they
-                              will represent the target product.
-                            </p>
-                          </div>
-                          <div className="detailbox">
-                            <ul>
-                              <li>
-                                <span className="first">Client</span>
-                                <span>Alvaro Morata</span>
-                              </li>
-                              <li>
-                                <span className="first">Category</span>
-                                <span>
-                                  <a href="#">Detail</a>
-                                </span>
-                              </li>
-                              <li>
-                                <span className="first">Date</span>
-                                <span>March 07, 2021</span>
-                              </li>
-                              <li>
-                                <span className="first">Share</span>
-                                <ul className="share">
-                                  <li>
-                                    <a href="#">{fb}</a>
-                                  </li>
-                                  <li>
-                                    <a href="#">{twitter}</a>
-                                  </li>
-                                  <li>
-                                    <a href="#">{insta}</a>
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div className="additional_images">
-                          <ul>
-                            <li>
-                              <div className="list_inner">
-                                <div className="my_image">
-                                  <img
-                                    src="img/thumbs/4-2.jpg"
-                                    alt="aali image"
-                                  />
-                                  <div
-                                    className="main"
-                                    data-img-url="img/mint2.png"
-                                  />
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="list_inner">
-                                <div className="my_image">
-                                  <img
-                                    src="img/thumbs/4-2.jpg"
-                                    alt="aali image"
-                                  />
-                                  <div
-                                    className="main"
-                                    data-img-url="img/portfolio/2.jpg"
-                                  />
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="list_inner">
-                                <div className="my_image">
-                                  <img
-                                    src="img/thumbs/4-2.jpg"
-                                    alt="aali image"
-                                  />
-                                  <div
-                                    className="main"
-                                    data-img-url="img/portfolio/3.jpg"
-                                  />
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </ModalBox>
-                  </div>
                 </div>
               </li>
             </ul>

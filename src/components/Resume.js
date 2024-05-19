@@ -6,6 +6,7 @@ const Resume = () => {
   useEffect(() => {
     jarallaxContent();
   }, []);
+
   return (
     <div className="aali_tm_section">
       <div className="aali_tm_resume">
@@ -21,7 +22,7 @@ const Resume = () => {
                 <h3>My Resume</h3>
                 <p>
                   I enjoy every step of the design process, from discussion and
-                  collaboration to concept and execution
+                  collaboration to concept and execution.
                 </p>
               </div>
               <div className="content_inner">
@@ -37,7 +38,7 @@ const Resume = () => {
                           <div className="info">
                             <div className="left">
                               <h3>Associate of Arts</h3>
-                              <span>University of North jacksonvile</span>
+                              <span>University of North Jacksonville</span>
                             </div>
                             <div className="right">
                               <span>2015 - 2017</span>
@@ -45,8 +46,7 @@ const Resume = () => {
                           </div>
                           <div className="text">
                             <p>
-                              Aali is a leading web design agency with an
-                              award-winning design
+                              Studied a variety of subjects to gain a broad foundation in the arts and sciences, preparing for further education in software engineering.
                             </p>
                           </div>
                         </div>
@@ -65,13 +65,11 @@ const Resume = () => {
                           </div>
                           <div className="text">
                             <p>
-                              Aali is a leading web design agency with an
-                              award-winning design
+                              Gained extensive knowledge and practical experience in software development, algorithms, data structures, and system design.
                             </p>
                           </div>
                         </div>
                       </li>
-                      
                     </ul>
                   </li>
                   <li className="wow fadeInRight" data-wow-duration="1s">
@@ -88,13 +86,12 @@ const Resume = () => {
                               <span>Cootie Finance</span>
                             </div>
                             <div className="right">
-                              <span>2021 - running</span>
+                              <span>2021 - Present</span>
                             </div>
                           </div>
                           <div className="text">
                             <p>
-                              Aali is a leading web design agency with an
-                              award-winning design
+                              Leading the development and implementation of decentralized finance projects, focusing on innovative solutions in the blockchain space.
                             </p>
                           </div>
                         </div>
@@ -104,7 +101,7 @@ const Resume = () => {
                           <span className="icon">{exp}</span>
                           <div className="info">
                             <div className="left">
-                              <h3>Solididty Expert</h3>
+                              <h3>Solidity Expert</h3>
                               <span>Karnage LLC</span>
                             </div>
                             <div className="right">
@@ -113,8 +110,7 @@ const Resume = () => {
                           </div>
                           <div className="text">
                             <p>
-                              Aali is a leading web design agency with an
-                              award-winning design
+                              Developed and audited smart contracts, ensuring the security and efficiency of blockchain applications.
                             </p>
                           </div>
                         </div>
@@ -125,7 +121,7 @@ const Resume = () => {
                           <div className="info">
                             <div className="left">
                               <h3>Developer Freelance</h3>
-                              <span>Fiver</span>
+                              <span>Fiverr</span>
                             </div>
                             <div className="right">
                               <span>2023 - 2024</span>
@@ -133,8 +129,7 @@ const Resume = () => {
                           </div>
                           <div className="text">
                             <p>
-                              Aali is a leading web design agency with an
-                              award-winning design
+                              Provided freelance development services, delivering high-quality software solutions tailored to client needs across various industries.
                             </p>
                           </div>
                         </div>

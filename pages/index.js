@@ -13,6 +13,7 @@ import Testimonial from "../src/components/Testimonial";
 import Layout from "../src/layouts/Layout";
 import CoolDivider from "../src/components/CoolDivider";
 import SplineBackground from '../src/components/SplineBackground';
+
 const Portfolio = dynamic(() => import("../src/components/Portfolio"), {
   ssr: false,
 });
@@ -22,6 +23,7 @@ const Index = () => {
     document.querySelector("body").classList.add("dark");
   }, []);
   return (
+    
     <Layout dark>
      <SplineBackground /> 
       <Home />
@@ -38,6 +40,7 @@ const Index = () => {
       <CoolDivider />
       <Contact />
     </Layout>
+   
   );
 };
 
