@@ -10,10 +10,8 @@ const Header = ({ dark }) => {
       const currentScrollY = window.pageYOffset;
 
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and not at the top
         setIsVisible(false);
       } else {
-        // Scrolling up or at the top
         setIsVisible(true);
       }
 
@@ -67,11 +65,9 @@ const Header = ({ dark }) => {
                 <a href="#portfolio">Portfolio</a>
               </li>
               <li>
-                <a href="#service">Service</a>
+                <a href="#service">Services</a>
               </li>
-              <li>
-                <a href="#testimonial">Testimonial</a>
-              </li>
+             
               <li>
                 <a href="#contact">Contact</a>
               </li>
