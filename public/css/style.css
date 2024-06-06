@@ -27,6 +27,12 @@
 /*	01) AALI BASE
 /*---------------------------------------------------*/
 
+.gradient-bg {
+    background: linear-gradient(45deg, #e000a3, #7a00d6, #0000ff);
+}
+:root {
+    --gradient-color: linear-gradient(45deg, #4b0082, #0000ff); /* Purple to blue gradient */
+}
 html {
 	overflow-x: hidden;
 	padding: 0px;
@@ -41,8 +47,8 @@ body{
 	letter-spacing: 0px;
 	word-wrap: break-word;
 	font-weight: 400;
-	background-color: #f4f5fe;
-	color: #7d7789;
+	background-color: #000000;
+	color: #f4f5fe;
 }
 svg{
 	fill: currentcolor;
@@ -301,7 +307,7 @@ h6 { font-size: 16px; }
 	height: auto;
 	float: left;
 	clear: both;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 	border-bottom: 1px solid rgba(0,0,0,.1);
 	padding: 15px 20px 15px 20px;
 }
@@ -385,9 +391,11 @@ h6 { font-size: 16px; }
 	top: 0px;
 	left: 0px;
 	right: 0px;
-	background: linear-gradient(45deg, grey, green, white);
-	transition: opacity 0.7s ease, top 0.3s ease;
+	background: linear-gradient(45deg, rgba(128, 0, 128, 0.8), rgba(75, 0, 130, 0.1));/* Change to your desired gradient colors with opacity */
+    opacity: 0.9; /* Adjust the opacity as needed */
+	transition: opacity 0.2s ease, top 0.3s ease;
 	padding: 5px 0; /* Adjusted padding for smaller height */
+	opacity: 0.3;
 
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
@@ -404,6 +412,7 @@ h6 { font-size: 16px; }
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	
 	padding: 5px 0; /* Adjusted padding for smaller height */
 
 	-webkit-transition: all .3s ease;
@@ -414,7 +423,7 @@ h6 { font-size: 16px; }
 }
 
 .aali_tm_header.animate {
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
 .aali_tm_header.animate .inner {
@@ -469,23 +478,23 @@ h6 { font-size: 16px; }
 }
 
 .aali_tm_header .menu ul li a:hover {
-	color: #2bbe57;
+	color: #8d118d;
 }
 
 .aali_tm_header .menu ul li.current a {
-	color: #2bbe57;
+	color: #8d118d;
 }
 
 .aali_tm_header.animate .menu ul li.current a {
-	color: #2bbe57;
+	color: #8d118d;
 }
 
 .aali_tm_header.animate .menu ul li a {
-	color: #2bbe57;
+	color: #8d118d;
 }
 
 .aali_tm_header.animate .menu ul li a:hover {
-	color: #2bbe57;
+	color: #8d118d;
 }
 
 
@@ -525,7 +534,7 @@ h6 { font-size: 16px; }
 	font-family: "Josefin Sans";
 	font-size: 25px;
 	font-weight: 700;
-	color: #fff;
+	color: #8d118d;
 	letter-spacing: -.2px;
 	margin-bottom: 15px;
 	display: inline-block;
@@ -535,7 +544,7 @@ h6 { font-size: 16px; }
 .aali_tm_hero .content .name{
 	font-size: 150px;
 	font-weight: 700;
-	color: #2bbe57;
+	color: #8d118d;
 	letter-spacing: -.2px;
 	line-height: 1.1;
 	z-index: 0;
@@ -579,19 +588,19 @@ h6 { font-size: 16px; }
 	color: #15111e;
 }
 .aali_tm_button.border .svg{
-	color: #2bbe57;
+	color: #8d118d;
 }
 .aali_tm_button a{
 	text-decoration: none;
 	color: #fff;
 	font-family: "Josefin Sans";
 	display: inline-block;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 	font-weight: 700;
 	position: relative;
 	padding: 15px 73px 15px 46px;
 	border-radius: 6px;
-	border: 2px solid #2bbe57;
+	border: 2px solid #8d118d;
 	white-space: nowrap;
 	
 	-webkit-transition: all .3s ease;
@@ -614,7 +623,7 @@ h6 { font-size: 16px; }
 	color: #fff;
 }
 .aali_tm_button.border a:hover{
-	background-color: #2bbe57;
+	background-color: #8d118d;
 	color: #fff;
 }
 .aali_tm_button.border a:hover .svg{
@@ -717,7 +726,7 @@ h6 { font-size: 16px; }
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 }
 .aali_tm_hero .avatar .two{
 	position: absolute;
@@ -731,7 +740,7 @@ h6 { font-size: 16px; }
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 }
 .aali_tm_hero .avatar .three{
 	position: absolute;
@@ -745,7 +754,7 @@ h6 { font-size: 16px; }
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 }
 .aali_tm_hero .avatar .four{
 	position: absolute;
@@ -789,7 +798,7 @@ h6 { font-size: 16px; }
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 }
 .aali_tm_hero .socials{
 	position: absolute;
@@ -822,7 +831,7 @@ h6 { font-size: 16px; }
 	        transition: all .3s ease;
 }
 .aali_tm_hero .socials ul a:hover{
-	color: #2bbe57;
+	color: #8d118d;
 }
 .aali_tm_hero .hero_mail{
 	position: absolute;
@@ -883,7 +892,7 @@ h6 { font-size: 16px; }
 	position: absolute;
 	width: 270px;
 	height: 270px;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 	bottom: -80px;
 	left: -65px;
 	z-index: 0;
@@ -908,7 +917,7 @@ h6 { font-size: 16px; }
 	width: 44%;
 	padding: 0px 100px 0px 140px;
 	z-index: 1;
-	text-shadow: #2bbe57 0px 0px 4px;
+	text-shadow: #8d118d 0px 0px 4px;
 }
 .aali_tm_about .center .title{
 	width: 100%;
@@ -922,7 +931,7 @@ h6 { font-size: 16px; }
 	font-family: "Josefin Sans";
 	font-size: 24px;
 	font-weight: 700;
-	color: #2bbe57;
+	color: #8d118d;
 	letter-spacing: -.2px;
 	display: inline-block;
 	margin-bottom: 6px;
@@ -935,7 +944,7 @@ h6 { font-size: 16px; }
 	z-index: 1;
 }
 .aali_tm_about .center h3 span{
-	color: #2bbe57;
+	color: #8d118d;
 }
 .aali_tm_about .center .subtitle{
 	font-family: "Josefin Sans";
@@ -990,7 +999,7 @@ h6 { font-size: 16px; }
 .aali_tm_about .right .square{
 	width: 1000px;
 	height: 390px;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 	position: absolute;
 	left: 100%;
 	margin-left: -200px;
@@ -1073,7 +1082,7 @@ h6 { font-size: 16px; }
   .aali_tm_main_title span {
 	font-size: 24px;
 	font-family: "Josefin Sans";
-	color: #2bbe57;
+	color: #8d118d;
 	font-weight: 700;
 	letter-spacing: -0.2px;
 	display: inline-block;
@@ -1093,7 +1102,7 @@ h6 { font-size: 16px; }
   
   .skills-loop {
 	font-size: 20px;
-	color: #ffcc00;
+	color: #8d118d;
 	margin-top: 20px;
   }
   
@@ -1153,7 +1162,7 @@ h6 { font-size: 16px; }
   
   .progress_inner .background .bar_in {
 	height: 100%;
-	background: #ffcc00;
+	background: #8d118d;
 	width: 0;
 	overflow: hidden;
 	border-radius: 3px 0 0 3px;
@@ -1474,7 +1483,7 @@ h6 { font-size: 16px; }
 	position: absolute;
 	width: 157px;
 	height: 227px;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 	top: 35px;
 	right: 0px;
 }
@@ -1545,7 +1554,7 @@ h6 { font-size: 16px; }
 }
 .aali_tm_service .service_list .price span{
 	font-size: 30px;
-	color: #2bbe57;
+	color: #8d118d;
 }
 .aali_tm_service .service_list .icon{
 	position: absolute;
@@ -1637,7 +1646,7 @@ h6 { font-size: 16px; }
 }
 .aali_tm_modalbox .service_popup_informations .main_title span span{
 	font-size: 30px;
-    color: #2bbe57;
+    color: #8d118d;
 }
 .aali_tm_modalbox .service_popup_informations .descriptions{
 	width: 100%;
@@ -1704,7 +1713,7 @@ h6 { font-size: 16px; }
 	content: "";
 	width: 30px;
 	height: 6px;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 	top: 50%;
 	transform: translateY(-50%);
 	left: 0px;
@@ -1716,7 +1725,7 @@ h6 { font-size: 16px; }
 	width: 30px;
 	height: 30px;
 	border-radius: 100%;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 }
 .aali_tm_resume .icon .svg{
 	width: 20px;
@@ -1815,7 +1824,7 @@ h6 { font-size: 16px; }
 .aali_tm_resume .media .square{
 	width: 125px;
 	height: 125px;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 	position: absolute;
 	top: 100px;
 	right: 100%;
@@ -2062,7 +2071,7 @@ h6 { font-size: 16px; }
 }
 .aali_tm_news .news_list ul li .details .category a{
 	text-decoration: none;
-	color: #2bbe57;
+	color: #8d118d;
 	font-weight: 700;
 	font-family: "Josefin Sans";
 }
@@ -2083,7 +2092,7 @@ h6 { font-size: 16px; }
 	        transition: all .3s ease;
 }
 .aali_tm_news .news_list ul li .details .title a:hover{
-	color: #2bbe57;
+	color: #8d118d;
 }
 .aali_tm_news .news_list ul li .date{
 	font-size: 16px;
@@ -2103,7 +2112,7 @@ h6 { font-size: 16px; }
 	color: #15111e;
 	font-family: "Josefin Sans";
 	letter-spacing: -.2px;
-	border: 2px solid #2bbe57;
+	border: 2px solid #8d118d;
 	border-radius: 6px;
 	font-weight: 700;
 	padding: 15px 45px 15px 46px;
@@ -2116,7 +2125,7 @@ h6 { font-size: 16px; }
 	        transition: all .3s ease;
 }
 .aali_tm_learn_more a:hover{
-	background-color: #2bbe57;
+	background-color: #8d118d;
 	color: #fff;
 }
 .aali_tm_news .news_hidden_details{
@@ -2334,12 +2343,12 @@ h6 { font-size: 16px; }
 .aali_tm_contact .left ul li h3{
 	font-size: 30px;
 	font-weight: 700;
-	color: #2bbe57;
+	color: #8d118d;
 	letter-spacing: -.2px;
 }
 .aali_tm_contact .left ul li a{
 	text-decoration: none;
-	color: #2bbe57;
+	color: #8d118d;
 }
 .aali_tm_contact .right{
 	width: 50%;
@@ -2446,10 +2455,11 @@ input[type=number] {
 
 .aali_tm_copyright{
 	width: 100%;
-	height: auto;
+	height: 300px;
 	clear: both;
 	float: left;
-	background-color: #3c3c3c;
+	background: linear-gradient(45deg, rgba(128, 0, 128, 0.8), rgba(75, 0, 130, 0.1)); /* Adjust the gradient colors */
+    opacity: 0.9; /* Adjust the opacity as needed */
 	padding: 120px 0px 65px 0px;
 	position: relative;
 }
@@ -2494,7 +2504,7 @@ input[type=number] {
 	border-radius: 100%;
 	text-align: center;
 	line-height: 48px;
-	color: #2bbe57;
+	color: #8d118d;
 	
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
@@ -2503,7 +2513,7 @@ input[type=number] {
 	        transition: all .3s ease;
 }
 .aali_tm_copyright .social ul li a:hover{
-	background-color: #2bbe57;
+	background-color: #8d118d;
 	color: #fff;
 }
 .aali_tm_copyright .social span{
@@ -2577,7 +2587,7 @@ input[type=number] {
 	height: 143px;
 	top: -77px;
 	right: 60px;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 }
 .line_anim{
 	display: inline-block;
@@ -2626,7 +2636,7 @@ input[type=number] {
   width: 6px;
   height: 6px;
   z-index: 100;
-  background-color: #2bbe57;
+  background-color: #8d118d;
   -webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
   transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
 }
@@ -2635,7 +2645,7 @@ input[type=number] {
   margin-top: -40px;
   width: 80px;
   height: 80px;
-  background-color: #2bbe57;
+  background-color: #8d118d;
   opacity: .3;
 }
 .cursor-outer {
@@ -2643,7 +2653,7 @@ input[type=number] {
   margin-top: -15px;
   width: 30px;
   height: 30px;
-  border: 2px solid #2bbe57;
+  border: 2px solid #8d118d;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 100;
@@ -3105,7 +3115,7 @@ body.intro .loader_line:after{
 	right: 30px;
 	width: 50px;
 	height: 50px;
-	background-color: #2bbe57;
+	background-color: #8d118d;
 	color: white;
 	border: none;
 	border-radius: 50%;

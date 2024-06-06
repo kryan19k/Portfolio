@@ -33,7 +33,7 @@ const About = () => {
               <h3>
                A Web <span>Designer</span>
               </h3>
-              <span className="subtitle">Based in Jacksonville,FL</span>
+              <span className="subtitle">Based in Oceanside, CA</span>
             </div>
             <div
               className="text-background" 
@@ -44,13 +44,13 @@ const About = () => {
                 Hi there! I'm Kory Ryan, a multifaceted developer and designer with a burning passion for all things tech and creative. My journey spans over two decades, during which I've mastered a diverse set of skills that make me your go-to expert for innovative and impactful projects.
               </p>
               <p>
-                As a blockchain development specialist, I excel in Solidity, React, Next.js, Wagmi, Ethers, Javascript, Typescript and more, building both front-end and back-end solutions. My expertise in smart contracts and dApps ensures that I can deliver secure, efficient, and revolutionary blockchain applications tailored to your needs.
+                As a blockchain development specialist, I excel in Solidity, React, Next.js, Wagmi, Ethers, Javascript, Typescript, node and more, building both front-end and back-end solutions. My expertise in smart contracts and dApps ensures that I can deliver secure, efficient, and revolutionary blockchain applications tailored to your needs.
               </p>
               <p>
                 But that's not all. I'm also a seasoned graphic designer and audio composer, adept at creating stunning visuals and immersive soundscapes. My experience extends to graphic videos and Unreal Engine game development, allowing me to bring a unique, interdisciplinary approach to every project.
               </p>
               <p>
-                Whether you're looking to develop a cutting-edge Web3 application, design a captivating user interface, or create an engaging multimedia experience, I'm here to turn your vision into reality. Let's work together to build something extraordinary!
+                Whether you're looking to develop a cutting-edge Web3 application, design a captivating user interface, need a complete nft collection made or create an engaging multimedia experience, I'm here to turn your vision into reality. Let's work together to build something extraordinary!
               </p>
             </div>
            

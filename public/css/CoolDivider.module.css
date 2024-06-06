@@ -10,25 +10,26 @@
 .line {
   flex: 1;
   height: 2px;
-  background: #38df5c; /* Adjust color as needed */
+  background: #8d118d; /* Adjust color as needed */
   position: relative;
+  z-index: 1; /* Ensure it goes behind other elements */
 }
 
 .decorativeElement {
   width: 100px; /* Adjust size as needed */
   height: 25px; /* Adjust size as needed */
   background: #4e4c4c; /* Adjust background color as needed */
-  border: 1px solid #38df5c; /* Adjust border color as needed */
+  border: 1px solid #8d118d; /* Adjust border color as needed */
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2; /* Ensure the decorative element is on top */
+  z-index: 2; /* Ensure the decorative element is on top of the line but behind the text */
   position: absolute;
 }
 
 .innerElement {
   width: 50px; /* Adjust size as needed */
   height: 2px; /* Adjust size as needed */
-  background: #38df5c; /* Adjust color as needed */
-  z-index: 1; /* Ensure the inner element is on top */
+  background: #8d118d; /* Adjust color as needed */
+  z-index: 2; /* Ensure the inner element is on top of the decorative element */
 }

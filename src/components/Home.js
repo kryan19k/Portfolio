@@ -11,9 +11,10 @@ const Home = () => {
     }, 5000);
     return () => clearInterval(interval);
   });
+
   return (
     <div className="aali_tm_section " id="home">
-      <div className="aali_tm_hero">
+      <div className="aali_tm_hero" style={{ background: 'none' }}>
         <div className="container">
           <div className="hero_inner">
             <div className="content">
@@ -21,8 +22,6 @@ const Home = () => {
               <h3 className="name">Kory</h3>
               <div className="job">
                 <span className="cd-headline rotate-1">
-                  {" "}
-                  {/* ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  */}
                   <span className="blc">Creative </span>
                   <span className="cd-words-wrapper">
                     <b className={text === 1 ? "is-visible" : "is-hidden"}>

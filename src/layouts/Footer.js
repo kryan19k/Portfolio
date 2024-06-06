@@ -6,7 +6,7 @@ const Footer = () => {
           <div className="copyright_inner">
             <div className="top">
               <div className="logo">
-                <img src="img/logo/logosmall.png" alt="aali image" />
+                <img src="img/logo/logosmallpurple.png" alt="aali image" />
               </div>
               <div className="social">
                 <span>Connect</span>

@@ -39,7 +39,7 @@ const Header = ({ dark }) => {
           {dark ? (
             <div className="logo">
               <a href="#">
-                <img src="img/logo/logosmall.png" alt="" />
+                <img src="img/logo/logosmallpurple.png" alt="" />
               </a>
             </div>
           ) : (
